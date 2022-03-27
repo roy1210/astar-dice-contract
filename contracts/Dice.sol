@@ -5,7 +5,7 @@ pragma solidity ^0.8.11;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
-contract DiceUpOrDown is Ownable {
+contract Dice is Ownable {
     using SafeMath for uint256;
 
     string private seed;

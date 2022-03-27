@@ -1,15 +1,15 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
 import { ethers, waffle } from "hardhat";
-import { DiceUpOrDown__factory, DiceUpOrDown } from "../typechain";
+import { Dice__factory, Dice } from "../typechain";
 
 describe("Dice game", function () {
   let deployer: SignerWithAddress;
   let addr1: SignerWithAddress;
-  let contract: DiceUpOrDown;
+  let contract: Dice;
   beforeEach(async function () {
     [deployer, addr1] = await ethers.getSigners();
-    contract = await new DiceUpOrDown__factory(deployer).deploy();
+    contract = await new Dice__factory(deployer).deploy();
   });
 
   it("Should return admin", async function () {
